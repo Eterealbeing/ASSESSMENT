@@ -1,0 +1,54 @@
+.image-gallery {
+  position: relative;
+  height: 600px; /* Set the height as per your images */
+  border: 1px solid black;
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0; /* Start with images invisible */
+  transition: opacity 1s ease-in-out; /* Smooth transition effect */
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+/* Keyframes for the image slideshow */
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Apply the keyframe animation to the images */
+.image-gallery img {
+  animation: imageAnimation 12s infinite; /* Adjust duration as needed */
+}
+
+/* Adjust the delay for each image in the gallery */
+.image-gallery img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.image-gallery img:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.image-gallery img:nth-child(3) {
+  animation-delay: 8s;
+}
+
+/* Add more styles or media queries as needed */

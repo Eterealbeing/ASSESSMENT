@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <style>
+   body {
+
+     background-image: url('assets/images/pngtree-abstact-minimalist-blue-wave-background-image_770385.jpg');
+     background-size: cover; /* Adjust according to your preference */
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed; /* Optional: Fixed background */
+     /* Add additional styles as needed */
+   }
+   ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #24a8e0;
+
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: plum;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  </style>
+  <body>
+  <ul>
+    <li><a href="landing%20page.html">HOME</a></li>
+  <li><a href="Artists.html">ARTISTS</a></li>
+  <li><a href="artwork.html">ARTWORKS</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">MORE</a>
+    <div class="dropdown-content">
+      <a href="Registration%20form.html">REGISTER</a>
+        <a href="Exhibition.html">EXHIBITIONS</a>
+        <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+
+    </div>
+  </li>
+</ul>
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information</p>
+    <form action=''>
+      <fieldset>
+        <label>Enter Your First Name: <input type="text" name="first-name" required /></label>
+        <label>Enter Your Last Name: <input type="text" name="last-name" required /></label>
+        <label>Enter Your Email: <input type="email" name="email" required /></label>
+        <label>Create a New Password: <input type="password" name="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <label><input type="radio" name="account-type" class="inline" /> Personal Account</label>
+        <label><input type="radio" name="account-type" class="inline" /> Business Account</label>
+        <label>
+          <input type="checkbox" name="terms" class="inline" required /> I accept the <a href="">terms and conditions</a>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>Upload a profile picture: <input type="file" name="file" /></label>
+        <label>Input your age (years): <input type="number" name="age" min="13" max="120" />
+        </label>
+        <label>How did you hear about us?
+          <select name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">Youtube</option>
+            <option value="2">Instagram</option>
+            <option value="3">Facebook</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label>Provide a bio:
+          <textarea name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
